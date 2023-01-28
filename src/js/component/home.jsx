@@ -2,9 +2,12 @@ import React from "react";
 import { useState } from "react";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+
 //create your first component
 const Home = () => {
+
     const [change, setChange] = useState("");
+
     const colores = [{
         id : "red",
         classStyle : "bg-danger"
@@ -18,12 +21,25 @@ const Home = () => {
         classStyle : "bg-success"
     }
 ]
-const alternar = () =>{
-    setInterval(()=>{
 
-    }, 1000)
-} 
+const alternar = () => {
+    console.log("Hellou!")
+    const nodoLight = document.querySelector("#trafficLight")
+    setInterval(transition(nodoLight.childNodes), 3000)
 }
+
+const transition = (arrayDom) => {
+    for(let i = 0; i < arrayDom.length; i++){
+        let time = i * 1000
+        setTimeout(() => { 
+            for (let j = 0; j < arrayDom.length; j++) {
+                arrayDom[j].classList.remove("iluminado")
+            }
+         arrayDom[i].classList.add("iluminado")
+        }, time)   
+    }
+}
+
     
     return (
         <div className="container m-5">
@@ -41,9 +57,10 @@ const alternar = () =>{
             </div>
             <br />
             <div className="d-flex justify-content-center">
-                <button className="btn btn-primary" onClick={alternar}>Alternar</button>
+                <button className="btn btn-primary"onClick={alternar}>Alternar</button>
             </div>
         </div>
     );
+}
 
 export default Home;
