@@ -1,12 +1,29 @@
+.main-box {
+    height: 300px;
+    width: 150px;
+    background-color: rgb(53, 49, 49);
+    box-shadow: 0px 0px 5px black, inset 0px 0px 10px black;
+    margin: auto
+}
 
-/* 
+.traffic {
+    height: 150px;
+    width: 30px;
+    background-color: rgb(53, 49, 49);
+    box-shadow: 0px 0px 5px black, inset 0px 0px 10px black;
+    margin: auto
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.color {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: auto;
+}
 
-*/
+.iluminado {
+    outline: none;
+    border-color: #ede89e;
+    box-shadow: 0px 0px 15px 10px rgba(253, 253, 222, 0.623), inset 3px 3px 10px black;
+    ;
+}
